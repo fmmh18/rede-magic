@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "601e2fcf-2d78-4def-9ea1-62ba5fdf6379",
+		"name": "rede-magic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FilmeListAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/filmes",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"filmes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilmeCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/filmes?nome=Cidade dos Anjos&ano=1998&atores=Nicolas Cage, Meg Ryan&diretor=Brad Silberling&classificacao_filme=4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"filmes"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Cidade dos Anjos"
+						},
+						{
+							"key": "ano",
+							"value": "1998"
+						},
+						{
+							"key": "atores",
+							"value": "Nicolas Cage, Meg Ryan"
+						},
+						{
+							"key": "diretor",
+							"value": "Brad Silberling"
+						},
+						{
+							"key": "classificacao_filme",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIlmeDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/filmes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"filmes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilmeUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/filmes/1?nome&ano&atores&diretor&classificacao_filme",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"filmes",
+						"1"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": null
+						},
+						{
+							"key": "ano",
+							"value": null
+						},
+						{
+							"key": "atores",
+							"value": null
+						},
+						{
+							"key": "diretor",
+							"value": null
+						},
+						{
+							"key": "classificacao_filme",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilmeDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/filmes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"filmes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
