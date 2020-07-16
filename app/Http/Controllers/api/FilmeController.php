@@ -33,6 +33,21 @@ class FilmeController extends Controller
             'diretor' => 'required',
             'classificacao_filme' => 'required|numeric'
         ];
+
+        if($request->hasFile('cartaz')){
+            // Get filename with the extension
+            $filenameWithExt = $request->file('cartaz')->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('cartaz')->getClientOriginalExtension();
+            // Filename to store
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('cartaz')->storeAs('public/cartaz', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.png';
+        }
             
         $validatedData = Validator::make($input,$rules, $messages);
        
@@ -42,9 +57,16 @@ class FilmeController extends Controller
         }
         else
         {
-            $result = Filme::create($input);
+            $result = Filme::create([
+                'nome' => $request->nome, 
+                'ano' => $request->ano, 
+                'atores' => $request->atores, 
+                'diretor' => $request->diretor, 
+                'classificacao_filme' => $request->classificacao_filme, 
+                'cartaz' => $fileNameToStore
+            ]);
 
-            return $result;
+            return $result->id;
         }
         
     }

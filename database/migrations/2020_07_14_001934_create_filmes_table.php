@@ -20,6 +20,7 @@ class CreateFilmesTable extends Migration
             $table->string('atores');
             $table->string('diretor');
             $table->integer('classificacao_filme');
+            $table->string('cartaz');
             $table->timestamps();
         });
     }
