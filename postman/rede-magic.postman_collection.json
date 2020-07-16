@@ -29,8 +29,43 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ano",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "atores",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "diretor",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "classificacao_filme",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "cartaz",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
 				"url": {
-					"raw": "localhost:8000/api/filmes?nome=Cidade dos Anjos&ano=1998&atores=Nicolas Cage, Meg Ryan&diretor=Brad Silberling&classificacao_filme=4",
+					"raw": "localhost:8000/api/filmes",
 					"host": [
 						"localhost"
 					],
@@ -38,28 +73,6 @@
 					"path": [
 						"api",
 						"filmes"
-					],
-					"query": [
-						{
-							"key": "nome",
-							"value": "Cidade dos Anjos"
-						},
-						{
-							"key": "ano",
-							"value": "1998"
-						},
-						{
-							"key": "atores",
-							"value": "Nicolas Cage, Meg Ryan"
-						},
-						{
-							"key": "diretor",
-							"value": "Brad Silberling"
-						},
-						{
-							"key": "classificacao_filme",
-							"value": "4"
-						}
 					]
 				}
 			},
@@ -71,7 +84,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/api/filmes/1",
+					"raw": "localhost:8000/api/filmes/3",
 					"host": [
 						"localhost"
 					],
@@ -79,7 +92,7 @@
 					"path": [
 						"api",
 						"filmes",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -90,8 +103,43 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ano",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "atores",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "diretor",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "classificacao_filme",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "cartaz",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
 				"url": {
-					"raw": "localhost:8000/api/filmes/1?nome&ano&atores&diretor&classificacao_filme",
+					"raw": "localhost:8000/api/filmes/1",
 					"host": [
 						"localhost"
 					],
@@ -100,28 +148,6 @@
 						"api",
 						"filmes",
 						"1"
-					],
-					"query": [
-						{
-							"key": "nome",
-							"value": null
-						},
-						{
-							"key": "ano",
-							"value": null
-						},
-						{
-							"key": "atores",
-							"value": null
-						},
-						{
-							"key": "diretor",
-							"value": null
-						},
-						{
-							"key": "classificacao_filme",
-							"value": null
-						}
 					]
 				}
 			},
